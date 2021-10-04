@@ -50,6 +50,12 @@
   (set-frame-font "Fira Code-10" t t))
 
 ;;;; load a beautiful theme
+(use-package acme-theme
+  :disabled
+  :config
+  (setq acme-theme-black-fg t)
+  (load-theme 'acme t))
+
 (use-package modus-themes
   :config
   (load-theme 'modus-operandi t))
