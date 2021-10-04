@@ -1,0 +1,4 @@
+alias ff find-file-other-window $1
+alias gg magit
+alias sdn sudo poweroff
+alias rbt sudo reboot
