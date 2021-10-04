@@ -23,6 +23,7 @@
  (l ru-dvorak) ;; my dvorak-based russian IM
  (m eshell)    ;; aweshell
  (m writeroom)
+ (m exwm)
 
  (lang conf)
  (lang lsp)
