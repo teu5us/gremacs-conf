@@ -26,6 +26,7 @@
  (m writeroom)
  (m exwm)
  (m telega)
+ (m pdf)
 ;;;;; languages
  (lang treesitter)
  (lang conf)
