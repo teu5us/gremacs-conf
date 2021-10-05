@@ -40,14 +40,22 @@
 ;;;; set input method
 (setq default-input-method 'ru-dvorak)
 
+;;;;; also change some keys for dvorak
+
+(defun extra-keys ()
+  (keyboard-translate ?\C-t ?\C-x)
+  (keyboard-translate ?\C-x ?\C-t))
+
+(add-hook 'dashboard-mode-hook #'extra-keys)
+
 ;;;; change window using mouse
 (setq focus-follows-mouse t
       mouse-autoselect-window t)
 
 ;;;; load favourite font
 (when (and (display-graphic-p)
-	   (member "Fira Code" (font-family-list)))
-  (set-frame-font "Fira Code-10" t t))
+	   (member "FiraCode Nerd Font" (font-family-list)))
+  (set-frame-font "FiraCode Nerd Font-10" t t))
 
 ;;;; load a beautiful theme
 (use-package acme-theme
