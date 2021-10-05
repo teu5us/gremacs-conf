@@ -8,6 +8,7 @@
 
 ;;;; load modules
 (p/mods
+;;;;; stuff
  (m editing)    ;; evil, avy, rg and stuff
  (m completion) ;; orderless, marginalia, consult, embark, company
  (m parens)     ;; smartparens
@@ -24,7 +25,9 @@
  (m eshell)    ;; aweshell
  (m writeroom)
  (m exwm)
-
+ (m telega)
+;;;;; languages
+ (lang treesitter)
  (lang conf)
  (lang lsp)
  (lang python)
