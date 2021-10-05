@@ -62,3 +62,7 @@
 
 ;;;; cl
 (setq inferior-lisp-program "ros run")
+
+;;;; helpful C source
+(setq find-function-C-source-directory
+      (format "/usr/share/emacs/%s/src" emacs-version))
