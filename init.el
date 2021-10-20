@@ -23,6 +23,7 @@
  (m checkers)  ;; fly[check/spell]
  (l ru-dvorak) ;; my dvorak-based russian IM
  (m eshell)    ;; aweshell
+ (m vterm)
  (m writeroom)
  (m exwm)
  (m telega)
