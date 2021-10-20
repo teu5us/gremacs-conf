@@ -80,3 +80,27 @@
 ;;;; helpful C source
 (setq find-function-C-source-directory
       (format "/usr/share/emacs/%s/src" emacs-version))
+
+;;;; google translate
+(use-package google-translate
+  :commands (google-translate-translate)
+  :bind ("C-c t" . google-translate-smooth-translate)
+  :custom
+  (google-translate-translation-directions-alist
+   '(("en" . "ru") ("ru" . "en")))
+  (google-translate-backend-method 'wget)
+  :init
+  (defun google-translate--search-tkk ()
+    "Search TKK."
+    (list 430675 2721866130))
+  (defun google-translate-from-selection (text)
+    (interactive (list (gui-get-primary-selection)))
+    (let ((google-translate-output-destination 'kill-ring))
+      (google-translate-translate "en" "ru" text)
+      (gui-set-selection nil (pop kill-ring))))
+  :config
+  (require 'google-translate-smooth-ui))
+
+;;;; kill ring selection integration
+(setq save-interprogram-paste-before-kill t
+      mouse-drag-copy-region t)
