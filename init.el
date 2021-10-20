@@ -70,8 +70,9 @@
   (load-theme 'acme t))
 
 (use-package modus-themes
-  :config
-  (load-theme 'modus-operandi t))
+  :hook (after-init . (lambda ()
+                        (load-theme 'modus-operandi t))))
+
 
 ;;;; cl
 (setq inferior-lisp-program "ros run")
