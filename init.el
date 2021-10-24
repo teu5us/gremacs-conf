@@ -104,3 +104,7 @@
 ;;;; kill ring selection integration
 (setq save-interprogram-paste-before-kill t
       mouse-drag-copy-region t)
+
+;;;; exwm monitor setup
+(with-eval-after-load 'exwm-randr
+  (setq exwm-randr-workspace-monitor-plist '(0 "DP-2")))
