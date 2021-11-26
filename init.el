@@ -43,7 +43,7 @@
       user-mail-address "paulkreuzmann@gmail.com")
 
 ;;;; set input method
-(setq default-input-method 'ru-dvorak)
+(setq default-input-method 'russian-computer)
 
 ;;;;; also change some keys for dvorak
 
@@ -51,7 +51,7 @@
   (keyboard-translate ?\C-t ?\C-x)
   (keyboard-translate ?\C-x ?\C-t))
 
-(add-hook 'dashboard-mode-hook #'extra-keys)
+;; (add-hook 'dashboard-mode-hook #'extra-keys)
 
 ;;;; change window using mouse
 (setq focus-follows-mouse t
