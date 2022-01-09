@@ -36,7 +36,8 @@
  (lang haskell)
  (lang markdown)
  (lang org)
- (lang cl))
+ (lang cl)
+ (lang nix))
 
 ;;;; add user info
 (setq user-full-name "Pavel Stepanov"
