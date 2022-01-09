@@ -72,7 +72,7 @@
 
 (use-package modus-themes
   :hook (after-init . (lambda ()
-                        (load-theme 'modus-operandi t))))
+                        (load-theme 'modus-vivendi t))))
 
 
 ;;;; cl
