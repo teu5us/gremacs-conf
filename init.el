@@ -100,7 +100,7 @@
       (google-translate-translate "en" "ru" text)
       (gui-set-selection nil (pop kill-ring))))
   :config
-  (require 'google-translate-smooth-ui))
+  (p/require 'google-translate 'google-translate-smooth-ui))
 
 ;;;; kill ring selection integration
 (setq save-interprogram-paste-before-kill t
