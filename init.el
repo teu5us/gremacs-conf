@@ -109,3 +109,14 @@
 ;;;; exwm monitor setup
 (with-eval-after-load 'exwm-randr
   (setq exwm-randr-workspace-monitor-plist '(0 "DP-2")))
+
+;;;; dimmer
+(use-package dimmer
+  :hook (after-init . dimmer-mode)
+  :custom
+  (dimmer-adjustment-mode :both)
+  :config
+  (dimmer-configure-which-key)
+  (dimmer-configure-magit)
+  (dimmer-configure-hydra)
+  (dimmer-configure-org))
