@@ -59,21 +59,21 @@
       mouse-autoselect-window t)
 
 ;;;; load favourite font
-(when (and (display-graphic-p)
-	   (member "FiraCode Nerd Font" (font-family-list)))
-  (set-frame-font "FiraCode Nerd Font-10" t t))
+(setq p/main-font "Fira Code"
+      p/main-font-size 12)
 
 ;;;; load a beautiful theme
 (use-package acme-theme
-  :disabled
-  :config
-  (setq acme-theme-black-fg t)
-  (load-theme 'acme t))
+  :custom
+  (acme-theme-black-fg t))
 
-(use-package modus-themes
-  :hook (after-init . (lambda ()
-                        (load-theme 'modus-vivendi t))))
+(use-package modus-themes)
 
+(use-package dracula-theme)
+
+(add-hook 'after-init-hook
+          #'(lambda ()
+              (load-theme 'dracula t)))
 
 ;;;; cl
 (setq inferior-lisp-program "ros run")
