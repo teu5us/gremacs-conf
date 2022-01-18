@@ -36,6 +36,7 @@
  (lang haskell)
  (lang markdown)
  (lang org)
+ (lang latex)
  (lang cl)
  (lang nix))
 
