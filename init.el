@@ -45,7 +45,10 @@
       user-mail-address "paulkreuzmann@gmail.com")
 
 ;;;; set input method
-(setq default-input-method 'russian-computer)
+(add-hook 'after-init-hook
+          #'(lambda ()
+              (setq default-input-method 'russian-computer))
+          90)
 
 ;;;;; also change some keys for dvorak
 
@@ -70,7 +73,12 @@
 
 (use-package modus-themes)
 
-(use-package dracula-theme)
+(use-package dracula-theme
+  :custom
+  (dracula-enlarge-headings nil)
+  (dracula-height-title-1 1.0)
+  (dracula-height-title-2 1.0)
+  (dracula-height-title-3 1.0))
 
 (add-hook 'after-init-hook
           #'(lambda ()
