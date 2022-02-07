@@ -131,13 +131,14 @@
   (dimmer-configure-org))
 
 ;;;; sushi preview in ranger
-(defun p/sushi-preview ()
-  (interactive)
-  (let ((marked-files (dired-get-marked-files)))
-    (mapc (lambda (f)
-            (let ((process-connection-type nil))
-              (start-process "" nil "sushi" f)))
-          marked-files)))
+(with-eval-after-load 'ranger
+  (defun p/sushi-preview ()
+    (interactive)
+    (let ((marked-files (dired-get-marked-files)))
+      (mapc (lambda (f)
+              (let ((process-connection-type nil))
+                (start-process "" nil "sushi" f)))
+            marked-files)))
 
-(define-key ranger-normal-mode-map (kbd "w p") #'p/sushi-preview)
-(define-key ranger-emacs-mode-map (kbd "C-x w p") #'p/sushi-preview)
+  (define-key ranger-normal-mode-map (kbd "w p") #'p/sushi-preview)
+  (define-key ranger-emacs-mode-map (kbd "C-x w p") #'p/sushi-preview))
