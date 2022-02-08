@@ -64,14 +64,18 @@
 
 ;;;; load favourite font
 (setq p/main-font "Fira Code"
-      p/main-font-size 12)
+      p/main-font-size 12
+      p/variable-pitch-font "Fira Sans"
+      p/variable-pitch-font-size 12)
 
 ;;;; load a beautiful theme
 (use-package acme-theme
   :custom
   (acme-theme-black-fg t))
 
-(use-package modus-themes)
+(use-package modus-themes
+  :custom
+  (modus-themes-variable-pitch-ui t))
 
 (use-package dracula-theme
   :custom
@@ -89,7 +93,16 @@
 
 ;;;; helpful C source
 (setq find-function-C-source-directory
-      (format "/usr/share/emacs/%s/src" emacs-version))
+      (let ((standard-directory (format "/usr/share/emacs/%s/src" emacs-version))
+            (nix-directory (format "%s../share/emacs/%s/src"
+                                   (file-name-directory (file-truename (executable-find "emacs")))
+                                   emacs-version)))
+        (cond
+         ((file-directory-p standard-directory)
+          standard-directory)
+         ((file-directory-p nix-directory)
+          nix-directory)
+         (t nil))))
 
 ;;;; google translate
 (use-package google-translate
