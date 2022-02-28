@@ -28,6 +28,7 @@
  (m exwm)
  (m telega)
  (m pdf)
+ (m folds)
 ;;;;; languages
  (lang treesitter)
  (lang conf)
