@@ -64,9 +64,9 @@
 
 ;;;; load favourite font
 (setq p/main-font "Fira Code"
-      p/main-font-size 12
+      p/main-font-size 14
       p/variable-pitch-font "Fira Sans"
-      p/variable-pitch-font-size 12)
+      p/variable-pitch-font-size 14)
 
 ;;;; load a beautiful theme
 (use-package acme-theme
