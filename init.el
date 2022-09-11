@@ -156,3 +156,7 @@
 
   (define-key ranger-normal-mode-map (kbd "w p") #'p/sushi-preview)
   (define-key ranger-emacs-mode-map (kbd "C-x w p") #'p/sushi-preview))
+
+;;;; splits configuration
+(setq split-width-threshold 80
+      split-height-threshold 40)
