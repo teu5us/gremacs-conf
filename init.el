@@ -64,7 +64,7 @@
       mouse-autoselect-window t)
 
 ;;;; load favourite font
-(setq p/main-font "Fira Code"
+(setq p/main-font "FiraCode NF"
       p/main-font-size 14
       p/variable-pitch-font "Fira Sans"
       p/variable-pitch-font-size 14)
