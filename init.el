@@ -85,9 +85,11 @@
   (dracula-height-title-2 1.0)
   (dracula-height-title-3 1.0))
 
+(use-package ef-themes)
+
 (add-hook 'after-init-hook
           #'(lambda ()
-              (load-theme 'dracula t)))
+              (load-theme 'ef-night t)))
 
 ;;;; cl
 (setq inferior-lisp-program "ros run")
