@@ -1,3 +1,3 @@
 (p/mods)
 
-(setq p/native-comp-march "sandybridge")
+(setq p/native-comp-march "native")
